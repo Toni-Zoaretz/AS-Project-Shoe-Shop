@@ -11,6 +11,7 @@ function Catalog() {
     isError: false,
     message: "",
   });
+
   useEffect(() => {
     const getProducts = async () => {
       try {
@@ -40,7 +41,6 @@ function Catalog() {
         {products.map((shoe) => (
           <li key={shoe.id} className="li-catalog">
             <img src={shoe.image} alt={shoe.model} />
-
             <Link to={`/updateShoe/${shoe.id}`}>{shoe.model}</Link>
             <span className="shoe-price">{shoe.price}</span>
           </li>

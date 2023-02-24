@@ -70,3 +70,17 @@ img {
 .shoe-price {
   font-size: 1.2rem;
 }
+
+.home-title {
+  color: rgb(216, 60, 86);
+  font-size: 3rem;
+}
+
+.update {
+  border: 1px solid pink;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}

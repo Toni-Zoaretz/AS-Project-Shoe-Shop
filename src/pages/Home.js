@@ -3,8 +3,7 @@ import LoginForm from "../components/LoginForm";
 function Home() {
   return (
     <div className="page">
-      Home
-      <LoginForm />
+      <h1 className="home-title">Home page</h1>
     </div>
   );
 }

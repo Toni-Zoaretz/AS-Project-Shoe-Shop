@@ -21,14 +21,5 @@ function App() {
   ]);
   return <RouterProvider router={router} />;
 }
-// (
-//   <div>
-//     <Header />
-//     <Home />
-//     <Catalog />
-//     <UpdateShoe />
-//     <AddShoe />
-//   </div>
-// );
 
 export default App;
