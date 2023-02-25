@@ -14,6 +14,7 @@ function App() {
       children: [
         { path: "/", element: <Home /> },
         { path: "/catalog", element: <Catalog /> },
+        { path: "/updateShoe", element: <Home /> }, //change comoentnt
         { path: "/updateShoe/:shoeId", element: <UpdateShoe /> },
         { path: "/addShoe", element: <AddShoe /> },
       ],

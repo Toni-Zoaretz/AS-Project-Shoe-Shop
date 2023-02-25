@@ -16,9 +16,7 @@ function Catalog() {
     const getProducts = async () => {
       try {
         setLoading(true);
-
         const response = await api.get("/shoes");
-
         setProducts(response.data);
       } catch (error) {
         console.error(error);
