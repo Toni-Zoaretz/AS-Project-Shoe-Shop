@@ -4,13 +4,8 @@ import { Link } from "react-router-dom";
 import api from "../api/api";
 
 function Catalog() {
-  const [cart, setCart] = useState([]);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState({
-    isError: false,
-    message: "",
-  });
 
   useEffect(() => {
     const getProducts = async () => {
@@ -20,10 +15,6 @@ function Catalog() {
         setProducts(response.data);
       } catch (error) {
         console.error(error);
-        setError({
-          isError: true,
-          message: error.response.data.message,
-        });
       } finally {
         setLoading(false);
       }
@@ -34,7 +25,6 @@ function Catalog() {
 
   return (
     <div className="page">
-      <h3>catalog</h3>
       <ul className="ul-catalog">
         {products.map((shoe) => (
           <li key={shoe.id} className="li-catalog">

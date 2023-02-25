@@ -10,7 +10,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-header {
+.header {
   border-bottom: 2px solid rgba(117, 113, 113, 0.426);
   display: flex;
   justify-content: center;
@@ -28,16 +28,12 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* gap: 1rem; */
-
-  /* color: white; */
 }
 
 .home-page::before {
   content: "";
   position: absolute;
-  background: url("./assets/still-g74a3ae501_1920.jpg") no-repeat center
-    center/cover;
+  background: url("./assets/homePage.jpg") no-repeat center center/cover;
   top: 0;
   left: 0;
   width: 100%;
@@ -48,7 +44,7 @@ header {
 .home-title {
   color: #333;
   font-size: 2.5rem;
-  font-weight: 400;
+  font-weight: 500;
 
   text-align: center;
   padding-bottom: 1rem;
@@ -58,9 +54,7 @@ header {
   font-size: 1.2rem;
   font-weight: 500;
   color: #333;
-
   padding-bottom: 1.5rem;
-  /* padding-bottom: 1rem; */
 }
 
 .start {
@@ -71,6 +65,7 @@ header {
   font-size: 0.9rem;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -95,14 +90,78 @@ header {
   font-weight: 500;
 }
 
+.list li a:hover {
+  text-decoration: 2px underline;
+  text-underline-offset: 4px;
+  transition: all ease-in;
+}
+
 .page {
   min-height: 94vh;
   width: 100%;
-  border: 3px solid rgb(104, 222, 13);
 }
 
-.form {
-  border: 1px solid pink;
+.box-info-update {
+  border: 2px solid rgba(117, 113, 113, 0.426);
+  background-color: rgba(255, 255, 255, 0.799);
+  border-radius: 5px;
+  padding: 5rem;
+  text-align: center;
+}
+
+.update-shoes::before {
+  content: "";
+  position: absolute;
+  background: url("./assets/ryan-plomp-jvoZ-Aux9aw-unsplash.jpg") no-repeat
+    center center/cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.product-update-title {
+  color: #333;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.update-page,
+.add-page,
+.update-shoes {
+  background-color: rgba(255, 255, 255, 0.681);
+  position: relative;
+  padding: 10rem;
+}
+
+.update-page::before {
+  content: "";
+  position: absolute;
+  background: url("./assets/formUpdate.jpg") no-repeat center center/cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.add-page::before {
+  content: "";
+  position: absolute;
+  background: url("./assets/wengang-zhai-_fOL6ebfECQ-unsplash.jpg") no-repeat
+    center center/cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 img {
@@ -111,17 +170,15 @@ img {
 }
 
 .ul-catalog {
-  border: 3px solid pink;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
-  padding: 0 5rem;
+  padding: 5rem 20rem;
 }
 
 .li-catalog {
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -130,22 +187,54 @@ img {
 
 .li-catalog a {
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   color: #333;
   font-weight: 500;
+  padding-top: 0.5rem;
 }
 
 .shoe-price {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
 }
 
 .update {
-  border: 1px solid pink;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+}
+
+input {
+  padding: 1rem;
+  border: 2px solid rgba(117, 113, 113, 0.6);
+  border-radius: 5px;
+}
+
+label {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.update-shoes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.update-shoes p {
+  font-size: 1rem;
+}
+
+span {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.back-btn {
+  padding: 7px 20px;
 }
 
 .add-form {
@@ -159,4 +248,66 @@ img {
 .add-title {
   text-align: center;
   font-size: 1.5rem;
+}
+
+.message-for-updating-user {
+  padding-top: 1rem;
+  color: #333;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.error-page::before {
+  content: "";
+  position: absolute;
+  background: url("./assets/error.jpg") no-repeat center center/cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+@media (min-width: 350px) and (max-width: 700px) {
+  .list a {
+    font-size: 1rem;
+  }
+
+  .home-title {
+    font-size: 1.5rem;
+  }
+
+  .home-info {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .ul-catalog {
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .box-info-update {
+    padding: 10px;
+    width: 100vw;
+  }
+
+  .box-info-update p {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+
+  .add-page,
+  .update-page {
+    padding: 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
 }

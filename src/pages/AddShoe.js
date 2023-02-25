@@ -21,30 +21,19 @@ function AddShoe() {
     });
   };
 
-  // const handleSubmit = async (event) => {
-  //   event.preventDefault();
-  //   console.log(50);
-  // };
-
   const handleSubmit = async (event) => {
-    // console.log("hey");
     event.preventDefault();
     try {
       await api.post("/shoes", formData);
-
       navigate("/catalog");
     } catch (error) {
       console.error(error);
-      // setError({
-      //   isError: true,
-      //   message: error.response.data.message,
-      // });
     }
   };
 
   return (
-    <div className="page">
-      <h1 className="add-title">here you can add a shoe</h1>
+    <div className="page add-page">
+      <h1 className="product-update-title">Here You Can Add a Shoe</h1>
       <form className="add-form" onSubmit={handleSubmit}>
         <label htmlFor="model">Model</label>
         <input
@@ -67,8 +56,10 @@ function AddShoe() {
           onChange={handleChange}
           value={formData.image}
         />
-
-        <button type="submit">Add Item</button>
+        <br></br>
+        <button type="submit" className="start">
+          Add Item
+        </button>
       </form>
     </div>
   );

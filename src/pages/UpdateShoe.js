@@ -10,18 +10,8 @@ function UpdateShoe() {
   const [image, setImage] = useState("");
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  // const [update, setUpdate] = useState("");
 
-  // const [loading, setLoading] = useState(true);
-  // const [error, setError] = useState({
-  // isError: false,
-  // message: "",
-  // });
-
-  // const params = useParams();
   const { shoeId } = useParams();
-
-  // const navigate = useNavigate();
 
   useEffect(() => {
     const getProduct = async () => {
@@ -33,10 +23,6 @@ function UpdateShoe() {
         setIsLoading(false);
       } catch (error) {
         console.error(error);
-        // setError({
-        // isError: true,
-        // message: error.response.data.message,
-        // });
       }
     };
 
@@ -52,7 +38,6 @@ function UpdateShoe() {
     setImage(product.image);
   }, [product]);
 
-  // --------------------------------------------------------------------
   const handleDelete = () => {
     const deleteItem = async () => {
       try {
@@ -64,13 +49,18 @@ function UpdateShoe() {
     };
     deleteItem();
   };
-  // -------------------------------------------------------------------
+
   const handleUpdate = () => {
-    if (price < 0) {
-      setMessage("price positive");
+    if (
+      price < 0 ||
+      typeof price !== "number" ||
+      typeof model !== "string" ||
+      model === " "
+    ) {
+      setMessage("you entered invalid input");
       return;
-      /////////other validation
     }
+
     const updateItem = async () => {
       try {
         const res = await api.put(`/shoes/${shoeId}`, {
@@ -87,14 +77,11 @@ function UpdateShoe() {
     updateItem();
   };
 
-  //  --------------------------------------------------------------
   return (
-    <div className="page">
-      <h1>here you can update</h1>
+    <div className="page update-page">
+      <h1 className="product-update-title">Update Product Details</h1>
       {!isLoading ? (
         <div className="update">
-          <span className="update-title">Update Here</span>
-
           <input
             type="text"
             name="image"
@@ -116,15 +103,19 @@ function UpdateShoe() {
             value={price}
             onChange={(e) => setPrice(e.target.value)}
           />
-          <div>
-            <button onClick={handleDelete}>Delete</button>
-            <button onClick={handleUpdate}>Update</button>
+          <div className="buttons">
+            <button onClick={handleDelete} className="start">
+              Delete
+            </button>
+            <button onClick={handleUpdate} className="start">
+              Update
+            </button>
           </div>
         </div>
       ) : (
         "LOADING..."
       )}
-      <h1>{message}</h1>
+      <h1 className="message-for-updating-user">{message}</h1>
     </div>
   );
 }
