@@ -1,6 +1,6 @@
 # 👟 Shoes Store - Admin Panel
 
-I was given a task @AppleSeeds Bootcamp to make an responsive Shoes store for admin panel.
+I was given a task @AppleSeeds Bootcamp to make an responsive Shoes store for admin panel.<br>
 I implement the project using `HTML`,`CSS`,`JavaScript`,`React`.
 
 ### Project Link:
@@ -9,10 +9,10 @@ https://toni-shoe-shop.netlify.app/
 
 ### Project Requirement:
 
-☑ Shoes catalog with image model and price
-☑ The admin can Add shoes to the Database
-☑ The admin can Update shoes from the Database
-☑ The admin can Delete shoes from the Database
+☑ Shoes catalog with image model and price<br>
+☑ The admin can Add shoes to the Database<br>
+☑ The admin can Update shoes from the Database<br>
+☑ The admin can Delete shoes from the Database<br>
 
 ### Screenshots
 
