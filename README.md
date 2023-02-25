@@ -18,11 +18,11 @@ https://toni-shoe-shop.netlify.app/
 
 ![Alt text](/src/assets/%E2%80%8F%E2%80%8FhomeSH.PNG)
 
-![plot](/src/assets/%E2%80%8F%E2%80%8FcatalogSH.PNG.PNG)
+![plot](/src/assets/%E2%80%8F%E2%80%8FcatalogSH.PNG)
 
-![plot](/src/assets/%E2%80%8F%E2%80%8FupdateSH.PNG.PNG)
+![plot](/src/assets/%E2%80%8F%E2%80%8FupdateSH.PNG)
 
-![plot](/src/assets/%E2%80%8F%E2%80%8FupSH.PNG.PNG)
+![plot](/src/assets/%E2%80%8F%E2%80%8FupSH.PNG)
 
 ### Deployment
 
